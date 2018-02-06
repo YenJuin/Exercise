@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+void hanoi(int num,char start,char temp,char end){
+	if(num>0){
+		hanoi(num-1,start,temp,end);
+		
+		printf("%d %c->%c\n",num,start,end);
+		hanoi(num-1,temp,start,end);
+	}
+}
+
+int main(void){
+	hanoi(4,'1','2','3');
+	return 0;
+}
