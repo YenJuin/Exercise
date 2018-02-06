@@ -1,0 +1,35 @@
+#include<stdio.h> 
+#include<stdlib.h>
+
+int answer(int a,int b)
+{
+	int answer;
+	
+	answer = a*b;
+	return answer;
+}
+
+int main()
+{
+	int input;
+	int a=1+(rand()%9);
+	int b=1+(rand()%9);
+	
+	printf("How much is %d times %d?\n",a,b);
+	printf("Enter your answer: ");
+	scanf("%d",&input);
+	
+	while(input!=answer(a,b)){
+		printf("No.Please try again.\n");
+		printf("Enter your answer: ");
+		scanf("%d",&input);
+		
+		if(input == answer(a,b)){
+			printf("Very good!");
+		}
+	}
+	while(input==answer(a,b)){
+		printf("Very good!");
+		return 0;
+	}
+}
