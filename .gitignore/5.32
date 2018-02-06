@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int guess()
+{
+	int number;
+	int i;
+	
+	number=rand()%1000+1;
+	srand(time(NULL));
+	
+	printf("Guess a number: ");
+	scanf("%d",&i);
+	
+	if(i==number){
+		printf("You guess the number!");
+	}
+	
+	while(i!=number){
+		if(i>number){
+			printf("Too high!\n");
+			scanf("%d",&i);
+		}
+		if(i<number){
+			printf("Too low!\n");
+			scanf("%d",&i);
+		}
+	}
+	return 1;
+}
+
+int main()
+{
+	if(guess()==1){
+		char a;
+		int Y,N;
+		printf("You guess the number!\n");
+		printf("Would you like to play again?(Y or N)\n");
+		scanf("%c",&a);
+		
+		if(a==Y)
+		if(a==N){
+			system("pause");
+		}
+	}
+}
