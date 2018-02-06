@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int amount;
+	int month;
+	float cs,ss;
+	
+	cs = 0;
+	ss = 0;
+	
+	while(amount<=100000){
+		printf("Enter total amount collected (-1 to quit): \n");
+		scanf("%d",&amount);
+		printf("Enter name of month: \n");
+		scanf("%s",&month);
+		printf("Total Collections:$ %d\n",amount);
+		
+		cs = amount*5/100;
+		ss = amount*4/100;
+	
+		printf("County Sales Tax:$ %.2f\n",cs);
+		printf("State Sales Tax:$ %.2f\n",ss);
+	}
+}
