@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int LCM();
+
+int main()
+{
+	printf("LCM of the two numbers is %d",LCM());
+}
+
+int LCM()
+{
+	int i,j,k,larger;
+	
+	printf("Enter the 1st number: ");
+	scanf("%d",&i);
+	printf("Enter the 2nd number: ");
+	scanf("%d",&j);
+	
+	if(i>j){
+		larger=i;
+	}
+	if(j>i){
+		larger=j;
+	}
+	for(k=larger;k>=larger;k++){
+		if(k%i==0 && k%j==0){
+			break;
+		}
+	}
+	return k;
+}
